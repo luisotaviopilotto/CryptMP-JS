@@ -11,42 +11,37 @@ Requer **Node 16+** (OpenSSL 1.1.1+, para `sha3-256` e `shake256`).
 ## Instalação
 
 ```bash
-npm install cryptmp
+npm install @luisotaviopilotto/cryptmp
 ```
 
-> O comando acima só funciona depois que o pacote estiver **publicado no npm**
-> com esse nome. Enquanto não publicar, dá para instalar do jeito local — mesmo
-> nome, mesmo `require('cryptmp')`:
+> O comando acima só funciona depois que o pacote estiver **publicado no npm**.
+> Enquanto não publicar, dá para instalar do jeito local — mesmo nome, mesmo
+> `require('@luisotaviopilotto/cryptmp')`:
 >
 > ```bash
 > # a) direto da pasta do projeto
 > npm install /caminho/para/cryptmp-js
 >
-> # b) via tarball (gera cryptmp-1.0.0.tgz)
+> # b) via tarball (gera luisotaviopilotto-cryptmp-1.0.0.tgz)
 > cd cryptmp-js && npm pack
-> npm install /caminho/para/cryptmp-1.0.0.tgz
+> npm install /caminho/para/luisotaviopilotto-cryptmp-1.0.0.tgz
 >
 > # c) direto do GitHub
 > npm install git+https://github.com/luisotaviopilotto/cryptmp-js.git
 > ```
 
-### Publicar no npm (para o `npm install cryptmp` funcionar para todos)
+### Publicar no npm
 
 ```bash
 cd cryptmp-js
 npm login
-npm publish            # nome "cryptmp" precisa estar livre no npm
+npm publish --access public   # pacotes com escopo são privados por padrão
 ```
-
-Se o nome `cryptmp` já estiver ocupado, use um nome com escopo — troque
-`"name"` no `package.json` para `"@luisotaviopilotto/cryptmp"` e rode
-`npm publish --access public`; a instalação vira
-`npm install @luisotaviopilotto/cryptmp`.
 
 ## Uso
 
 ```js
-const th = require('cryptmp'); // instalado; ou require('./cryptmp') local
+const th = require('@luisotaviopilotto/cryptmp'); // ou require('./cryptmp') local
 
 // 1. Chave global de 32 bytes — de um segredo, nunca do banco.
 const key = th.Key.fromHex(1, '…64 hex chars…'); // ou th.Key.generate(1)
@@ -81,6 +76,12 @@ hasher.verify(pw, hashAntigo);            // acha k1 pelo keyid automaticamente
 export CRYPTMP_KEY=$(node bin/cryptmp.js gen-key)
 printf 'minha_senha' | node bin/cryptmp.js hash --cost 12
 node bin/cryptmp.js verify '$th$1$12$1$...' 'minha_senha'
+```
+
+Com o pacote instalado, o binário `cryptmp` fica disponível via `npx`:
+
+```bash
+npx cryptmp gen-key
 ```
 
 ## Testes

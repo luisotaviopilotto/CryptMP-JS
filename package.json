@@ -1,5 +1,5 @@
 {
-  "name": "cryptmp",
+  "name": "@luisotaviopilotto/cryptmp",
   "version": "1.0.0",
   "description": "Password hashing with a temporal pepper (SHA-3 family). Interoperable with the Go and Python implementations.",
   "main": "cryptmp.js",
@@ -19,7 +19,16 @@
   "engines": {
     "node": ">=16"
   },
-  "keywords": ["password", "hashing", "sha3", "shake256", "pepper", "kdf", "cryptmp", "crypt"],
+  "keywords": [
+    "password",
+    "hashing",
+    "sha3",
+    "shake256",
+    "pepper",
+    "kdf",
+    "cryptmp",
+    "crypt"
+  ],
   "author": "Luis Otavio",
   "license": "MIT",
   "repository": {
