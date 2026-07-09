@@ -1,0 +1,65 @@
+{
+  "primitives": {
+    "normalize_password('password')": "c0067d4af4e87f00dbac63b6156828237059172d1bbeac67427345d6a9fda484",
+    "derive_pepper(0,0,0,4)": "0aeba54c0d7e05998e2992b447cc58611507c5dd0212a4d1d060ddc9596a695f",
+    "derive_pepper(0,1,0,4)": "6910ec4fc05d94ba14f9a818f02228ffd0b2fe6b78acd34582920ec74f4c341c",
+    "blind_password(b,pep0,0)": "814b06a1b5fb26dcbc94751b1c8efe7dba65e44d26b9e4d5c1aa29dab9524d2a"
+  },
+  "vectors": [
+    {
+      "name": "KAT-001",
+      "password": "password",
+      "key_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+      "salt_hex": "00000000000000000000000000000000",
+      "cost": 4,
+      "t": 0,
+      "key_id": 0,
+      "hash_hex": "2150746ed73e3c06bc20de6ef85475839fdb4d71f5b65d6867b4cc726bcf495b",
+      "encoded": "$th$1$4$0$00000000000000000000000000000000$2150746ed73e3c06bc20de6ef85475839fdb4d71f5b65d6867b4cc726bcf495b$0"
+    },
+    {
+      "name": "KAT-002",
+      "password": "password",
+      "key_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+      "salt_hex": "00000000000000000000000000000000",
+      "cost": 4,
+      "t": 1,
+      "key_id": 0,
+      "hash_hex": "b66d6e49d6fd1ed0f26bf19cea52e94f3428f22dde4490cf2d9a8a0b61055b26",
+      "encoded": "$th$1$4$0$00000000000000000000000000000000$b66d6e49d6fd1ed0f26bf19cea52e94f3428f22dde4490cf2d9a8a0b61055b26$1"
+    },
+    {
+      "name": "KAT-003",
+      "password": "correct horse battery staple",
+      "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "salt_hex": "000102030405060708090a0b0c0d0e0f",
+      "cost": 4,
+      "t": 123456,
+      "key_id": 0,
+      "hash_hex": "cb629d4a3d7dea2a7bab867635bb8801eee1d2fc1b6b048c54d1181f32d69e93",
+      "encoded": "$th$1$4$0$000102030405060708090a0b0c0d0e0f$cb629d4a3d7dea2a7bab867635bb8801eee1d2fc1b6b048c54d1181f32d69e93$123456"
+    },
+    {
+      "name": "KAT-004",
+      "password": "senha",
+      "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "salt_hex": "000102030405060708090a0b0c0d0e0f",
+      "cost": 4,
+      "t": 7,
+      "key_id": 0,
+      "hash_hex": "56932152f29e4b443bf9f51fa1bd57da77d115eb2c6a077c5674c84997740144",
+      "encoded": "$th$1$4$0$000102030405060708090a0b0c0d0e0f$56932152f29e4b443bf9f51fa1bd57da77d115eb2c6a077c5674c84997740144$7"
+    },
+    {
+      "name": "KAT-005",
+      "password": "🔒éção",
+      "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "salt_hex": "000102030405060708090a0b0c0d0e0f",
+      "cost": 4,
+      "t": 42,
+      "key_id": 0,
+      "hash_hex": "61994b3358ae875ea5350bb8aa9888cf045b5a2f632d0cc8176e40bc4e340528",
+      "encoded": "$th$1$4$0$000102030405060708090a0b0c0d0e0f$61994b3358ae875ea5350bb8aa9888cf045b5a2f632d0cc8176e40bc4e340528$42"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "cryptmp",
+  "version": "1.0.0",
+  "description": "Password hashing with a temporal pepper (SHA-3 family). Interoperable with the Go and Python implementations.",
+  "main": "cryptmp.js",
+  "type": "commonjs",
+  "bin": {
+    "cryptmp": "bin/cryptmp.js"
+  },
+  "files": [
+    "cryptmp.js",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "keywords": ["password", "hashing", "sha3", "shake256", "pepper", "kdf", "cryptmp", "crypt"],
+  "author": "Luis Otavio",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisotaviopilotto/cryptmp-js.git"
+  }
+}
