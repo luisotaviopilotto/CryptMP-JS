@@ -61,5 +61,27 @@
       "hash_hex": "61994b3358ae875ea5350bb8aa9888cf045b5a2f632d0cc8176e40bc4e340528",
       "encoded": "$th$1$4$0$000102030405060708090a0b0c0d0e0f$61994b3358ae875ea5350bb8aa9888cf045b5a2f632d0cc8176e40bc4e340528$42"
     }
+  ],
+  "vectors_v2": [
+    {
+      "name": "KAT-V2-001",
+      "password": "password",
+      "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "salt_hex": "000102030405060708090a0b0c0d0e0f",
+      "cost": 14,
+      "t": 0,
+      "key_id": 0,
+      "encoded": "$th$2$14$0$000102030405060708090a0b0c0d0e0f$828d178272f013132b018f535d807b0e2714f384c603bf80a69f86cacfab44f3$0"
+    },
+    {
+      "name": "KAT-V2-002",
+      "password": "🔒éção",
+      "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "salt_hex": "000102030405060708090a0b0c0d0e0f",
+      "cost": 14,
+      "t": 42,
+      "key_id": 0,
+      "encoded": "$th$2$14$0$000102030405060708090a0b0c0d0e0f$475b268f99e70b54a22199162bb27ee5bfb77bcad528cd5df5e487665bd2b987$42"
+    }
   ]
 }

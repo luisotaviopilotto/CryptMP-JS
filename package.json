@@ -1,7 +1,7 @@
 {
   "name": "@luisotaviopilotto/cryptmp",
-  "version": "1.0.1",
-  "description": "Password hashing with a temporal pepper (SHA-3 family). Interoperable with the Go and Python implementations.",
+  "version": "2.0.0",
+  "description": "Password hashing with a temporal pepper (HMAC-SHA3-256 + scrypt).",
   "main": "cryptmp.js",
   "type": "commonjs",
   "bin": {
